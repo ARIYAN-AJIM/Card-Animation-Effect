@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Syne', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #00bcd4, #ffeb3b);
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+
+.container .card{
+    background-image: url('https://plus.unsplash.com/premium_photo-1661599025598-60ac13333979?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: .5s;
+}
+
+.container .card:hover{
+    height: 400px;
+}
+
+.container .card .imgbox{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 260px;
+    height: 220px;
+    background-color: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: cubic-bezier(0.19, 1, 0.22, 1).8s;
+}
+
+
+.container .card:hover .imgbox{
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.2);
+}
+
+.container .card .imgbox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.container .card .content{
+    position: absolute;
+    top: 268px;
+    width: 100%;
+    padding: 0 30px;
+    text-align: center;
+    height: 35px;
+    overflow: hidden;
+}
+
+
+.container .card:hover .content{
+    top: 130px;
+    height: 250px;
+}
+.container .card .content h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.container .card .content p{
+    font-size: 1.2vw;
+    letter-spacing: .01vw;
+    font-weight:600;
+    margin-top: 1vw;
+    color: #333;
+}
+
+.container .card .content a{
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    background: var(--clr);
+    border-radius: .4vw;
+    transition: cubic-bezier(0.19, 1, 0.22, 1).5s;
+}
+
+.container .card .content a:hover{
+    background: #333;
+}
